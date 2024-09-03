@@ -1,0 +1,9 @@
+Lunes:
+
+Tarea: Crear una página que utilice varios selectores CSS (clases, IDs, elementos, etc.) para aplicar diferentes estilos a una página HTML básica. Incluye al menos tres selectores diferentes y experimenta con propiedades de colores y fuentes. También usa etiquetas semanticas (main, header, nav, etc.)
+
+Para aprender acerca de las fuentes en css puedes visitar este link: https://www.w3schools.com/css/css_text.asp
+
+Cree una nueva carpeta llamada "Tareas" en la cual irás colocando cada una de las tareas que vayas completando.
+
+Suerte.

@@ -36,6 +36,10 @@ nav figure {
     padding: 5px;
 }
 
+li a {
+    color: aliceblue;
+}
+
 .logo {
     display: flex;
     width: 40px;
@@ -54,6 +58,7 @@ main {
     align-items: center;
     justify-content: center;
     align-content: center;
+    opacity: 0.5;
 }
 
 .info {
@@ -71,6 +76,8 @@ main {
     align-content: center;
     gap: 2px;
     padding: 24px;
+    background-color: rgb(33, 44, 143);
+    color: aliceblue;
 }
 
 .content-card {
@@ -105,6 +112,11 @@ main {
     background-color: rgb(216, 216, 216);
     border-radius: 10px;
     font-weight: 600;
+}
+
+.background-one {
+    background-color: rgb(128, 128, 128);
+    padding: 24px;
 }
 
 footer {

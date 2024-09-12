@@ -1,3 +1,7 @@
-let nombre = 12 || "Rafael"
-edad = 19 > 12
-nombre = 12
+
+let persona = {
+  username: 'Rafael',
+  email: 'rafaelbianchi.dev@gmail.com',
+  password: '123456',
+  // ... other properties
+}

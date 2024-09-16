@@ -81,10 +81,10 @@ main {
 }
 
 .content-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .separe-card {
@@ -96,6 +96,7 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    width: 200px;
 }
 
 .card {
@@ -116,6 +117,13 @@ main {
 
 .background-one {
     background-color: rgb(128, 128, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.info-container {
     padding: 24px;
 }
 

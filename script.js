@@ -1,17 +1,11 @@
+let menuBtn = document.querySelector('.hamburguer')
+let menu = document.querySelector(".menu-mobile")
+let closeMenu = document.querySelector("#close-menu")
 
+menuBtn.addEventListener("click", () => {
+  menu.classList.toggle("active")
+})
 
-let persona = {
-  username: 'Rafael',
-  email: 'rafaelbianchi.dev@gmail.com',
-  password: '123456',
-  // ... other properties
-}
-
-let edad = prompt("Cual es tu edad?")
-
-if(edad >= 18) {
-    alert("Eres adulto")
-} else {
-    alert("No eres adulto")
-}
-
+closeMenu.addEventListener('click', () => {
+  menu.classList.remove("active")
+})

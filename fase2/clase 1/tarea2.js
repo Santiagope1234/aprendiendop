@@ -24,7 +24,7 @@ function crearUsuario() {
     let apellido = apellidoInput.value.trim();
 
     // Verificar si el usuario ya existe en listaUsuarios
-    let usuarioExistente = listaUsuarios.find(usuario => 
+    let usuarioExistente = listaUsuarios.find(usuario =>
         usuario.nombreForm === nombre && usuario.apellidoForm === apellido
     );
 
@@ -68,6 +68,8 @@ function crearNota() {
     } else {
         alert('Por favor, crea un usuario primero.');
     }
+
+    userNotes()
 }
 
 function guardarUsuariosEnLocalStorage() {
@@ -79,4 +81,29 @@ function cargarUsuariosDesdeLocalStorage() {
     if (usuariosGuardados) {
         listaUsuarios.push(...JSON.parse(usuariosGuardados));
     }
+}
+
+function userNotes() {
+    const container = document.createElement('div')
+    container.classList.add('container')
+    currentUser.listaNotas.map(({ noteTitle, noteDesc }) => {
+        let divNota = document.createElement('div');
+        divNota.addEventListener('click', () => {
+            container.removeChild(divNota)
+            container.remove()
+        })
+        divNota.classList.add('nota')
+        let notaTitle = document.createElement('h2')
+        let notaDescription = document.createElement('p')
+
+
+        notaTitle.innerText = noteTitle
+        notaDescription.innerText = noteDesc
+        divNota.append(notaTitle, notaDescription)
+        container.append(divNota)
+    })
+
+    document.body.appendChild(container)
+
+    return 0
 }

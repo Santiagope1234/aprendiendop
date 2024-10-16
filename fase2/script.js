@@ -14,6 +14,7 @@ btn.addEventListener('click', (e) => {
   e.preventDefault()
 
   crearUsuario()
+  crearDivEnHTML()
 })
 
 function crearUsuario() {
@@ -44,4 +45,14 @@ function addNewFriend(user) {
   }
 
   return usuarios[user].listaDeAmigos.push(amigo)
+}
+
+function crearDivEnHTML() {
+  const div = document.createElement('div')
+  const h2 = document.createElement('h2')
+  const body = document.body; // Seleccionamos el cuerpo del documento como padre
+
+  h2.innerHTML = 'hola'
+  body.appendChild(h2) // Agregamos el h2 al cuerpo
+  body.insertBefore(div, h2) // Insertamos el div antes del h2
 }

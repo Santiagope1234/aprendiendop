@@ -7,25 +7,47 @@
     <title>Document</title>
   </head>
   <body>
+    <style>
+      :root {
+        color-scheme: light dark;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .nota {
+        border: 1px solid gray;
+        width: 100%;
+      }
+    </style>
     <header><nav></nav></header>
     <main>
       <h1 id="texto">Hola putos</h1>
       <div class="form-container">
         <form class="formulario" action="">
           <label for="nombre">Nombre</label>
-          <input name="nombre" type="text" id="nombre" />
+          <input name="nombre" type="text" id="nombre" required />
 
           <label for="apellido">Apellido</label>
-          <input name="apellido" type="text" id="apellido" />
+          <input name="apellido" type="text" id="apellido" required />
           <button class="button-form" id="boton-one">Enviar</button>
 
           <label for="note-tittle" id="label-titulo">Título</label>
-          <input name="note-tittle" type="text" id="note-tittle" />
+          <input name="note-tittle" type="text" id="note-tittle" required />
 
           <label for="note-desc" id="label-nota">Nota</label>
-          <input name="note-desc" type="text" id="note-desc" />
+          <input name="note-desc" type="text" id="note-desc" required />
           <button id="boton-two">Agregar Nota</button>
         </form>
+      </div>
+
+      <div class="notes-container">
+        <h2>Esta es la nota que acabas de crear</h2>
+        <h2 id="title"></h2>
+        <p id="description"></p>
       </div>
     </main>
     <script src="./tarea2.js"></script>

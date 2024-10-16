@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header><nav></nav></header>
     <main>
-      <h1 id="texto">Hola putos</h1>
+      <h1 class="one-title" id="texto">Hola putos</h1>
       <div class="form-container">
         <form class="formulario" action="">
           <label for="nombre">Nombre</label>
@@ -23,8 +24,12 @@
           <input name="note-tittle" type="text" id="note-tittle" />
 
           <label for="note-desc" id="label-nota">Nota</label>
-          <input name="note-desc" type="text" id="note-desc" />
-          <button id="boton-two">Agregar Nota</button>
+          <input
+            class="note-desc"
+            name="note-desc"
+            type="text"
+            id="note-desc" />
+          <button class="boton-two" id="boton-two">Agregar Nota</button>
         </form>
       </div>
     </main>

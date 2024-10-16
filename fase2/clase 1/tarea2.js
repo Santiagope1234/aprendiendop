@@ -68,6 +68,7 @@ function crearNota() {
     } else {
         alert('Por favor, crea un usuario primero.');
     }
+    userNotes()
 }
 
 function guardarUsuariosEnLocalStorage() {
@@ -79,4 +80,44 @@ function cargarUsuariosDesdeLocalStorage() {
     if (usuariosGuardados) {
         listaUsuarios.push(...JSON.parse(usuariosGuardados));
     }
+}
+
+function userNotes() {
+    // Eliminar contenedor previo si existe para evitar duplicados
+    let contenedorExistente = document.querySelector('.contenedor-resultado');
+    if (contenedorExistente) {
+        contenedorExistente.remove();
+    }
+
+    let contenedor = document.createElement('div');
+    contenedor.classList.add('contenedor-resultado');
+
+    currentUser.listaNotas.forEach((nota, index) => {
+        let div = document.createElement('div');
+        div.classList.add('nota');
+
+        // Event listener para eliminar la nota al hacer clic
+        div.addEventListener('click', () => {
+            // Confirmar eliminación (opcional)
+            if (confirm('¿Deseas eliminar esta nota?')) {
+                // Eliminar la nota del array
+                currentUser.listaNotas.splice(index, 1);
+                // Guardar el array actualizado en localStorage
+                guardarUsuariosEnLocalStorage();
+                // Eliminar el elemento del DOM
+                div.remove();
+            }
+        });
+
+        let h2 = document.createElement('h2');
+        let p = document.createElement('p');
+        h2.innerHTML = nota.noteTitle;
+        p.innerHTML = nota.noteDesc;
+        div.appendChild(h2);
+        div.appendChild(p);
+        div.append(trashCan)
+        contenedor.appendChild(div);
+    });
+
+    document.body.appendChild(contenedor);
 }
